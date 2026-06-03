@@ -1,17 +1,19 @@
+print("-=-" * 10)
+print("Analisador de triângulos")
+print("-=-" * 10)
 
-lado1 = float(input("Digite o primeiro lado: "))
-lado2 = float(input("Digite o segundo lado: "))
-lado3 = float(input("Digite o terceiro lado: "))
+a = float(input("Primeiro segmento: "))
+b = float(input("Segundo segmento: "))
+c = float(input("Terceiro segmento: "))
 
-if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
-    
-
-    if lado1 == lado2 == lado3:
-        print("Triângulo Equilátero: todos os lados iguais.")
-    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-        print("Triângulo Isósceles: dois lados iguais.")
+if a < b + c and b < a + c and c < a + b:
+    print("Os segmentos acima podem formar um triângulo ", end="")
+    if a == b == c:
+        print("EQUILÁTERO")
+    elif a != b and a != c and b != c:
+        print("ESCALENO")
     else:
-        print("Triângulo Escaleno: todos os lados diferentes.")
-        
+        print("ISÓSCELES")
 else:
-    print("Os valores informados não podem formar um triângulo.")
+    print("Os segmentos acima NÃO PODEM formar um triângulo.")
+
