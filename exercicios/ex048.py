@@ -1,5 +1,3 @@
-numero = int(input("Digite um número para ver a tabuada: "))
-print(f"\nTabuada do {numero}:")
-for i in range(1, 11):
-    resultado = numero * i
-    print(f"{numero} x {i} = {resultado}")
+valor=int(input("digite um numero pra ver sua tabuada"))
+for c in range(1,11):
+     print(f"{valor} x {c} = {valor*c}")
